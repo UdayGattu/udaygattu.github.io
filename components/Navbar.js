@@ -16,6 +16,9 @@ export default function Navbar() {
           <Link href="/" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Home
           </Link>
+          <Link href="/studies" className="hover:text-accent transition-colors duration-300 cursor-pointer">
+            Studies
+          </Link>
           <Link href="/work" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Work
           </Link>
@@ -25,11 +28,11 @@ export default function Navbar() {
           <Link href="/projects" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Projects
           </Link>
-          <Link href="/contact" className="hover:text-accent transition-colors duration-300 cursor-pointer">
-            Contact
-          </Link>
           <Link href="/cv" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Resume
+          </Link>
+          <Link href="/contact" className="hover:text-accent transition-colors duration-300 cursor-pointer">
+            Contact
           </Link>
         </div>
         <div className="flex items-center gap-4">

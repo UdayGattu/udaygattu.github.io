@@ -9,10 +9,19 @@ export default function Projects() {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
+      className="px-4"
     >
-      <h2 className="text-3xl font-bold mb-6 text-accent">Projects & Research</h2>
-      {projects.map((proj) => (
-        <div key={proj.id} className="mb-8">
+      <h2 className="text-3xl font-bold mb-6 text-accent text-center">
+        Projects & Research
+      </h2>
+      {projects.map((proj, index) => (
+        <motion.div
+          key={proj.id}
+          initial={{ opacity: 0, y: index % 2 === 0 ? 50 : -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: index * 0.3 }}
+          className="mb-8"
+        >
           <h3 className="text-2xl font-semibold text-accent">{proj.title}</h3>
           <div className="flex flex-col md:flex-row items-center gap-4 mt-2">
             <motion.img
@@ -40,7 +49,7 @@ export default function Projects() {
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </motion.div>
   );

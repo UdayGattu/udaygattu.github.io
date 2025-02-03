@@ -10,7 +10,7 @@ export default {
       colors: {
         primary: "#D32F2F",    /* Vibrant red */
         secondary: "#212121",  /* Dark grey/black background */
-        accent: "#FFFFFF",     /* White accents */
+        accent: "#FFFFFF",     /* White accents for text and buttons */
       },
       animation: {
         fadeIn: "fadeIn 1.5s ease-in-out",
