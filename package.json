@@ -1,0 +1,23 @@
+{
+  "name": "udaygattu.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "^10.18.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
