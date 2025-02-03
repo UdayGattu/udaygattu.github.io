@@ -154,6 +154,8 @@ Copy
 Running Locally
 Install Dependencies: Open your terminal in the project root and run:
 
+
+
 bash
 Copy
 npm install
