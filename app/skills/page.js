@@ -1,9 +1,8 @@
 // app/skills/page.js
 "use client";
 import { motion } from "framer-motion";
-import { FaPython, FaCss3Alt, FaLinkedinIn, FaAws } from "react-icons/fa";
-import { SiJavascript, SiTensorflow, SiPytorch, SiHuggingface, SiGooglecloud } from "react-icons/si";
-import { FaGraduationCap } from "react-icons/fa";
+import { skills } from "../../data";
+import { FaReact } from "react-icons/fa"; // fallback icon
 
 const directions = [
   { x: -50, opacity: 0 },
@@ -13,31 +12,7 @@ const directions = [
 ];
 
 export default function Skills() {
-  const skillsProgramming = [
-    { name: "Python", icon: <FaPython className="w-10 h-10 text-accent" /> },
-    { name: "JavaScript", icon: <SiJavascript className="w-10 h-10 text-accent" /> },
-    { name: "CSS", icon: <FaCss3Alt className="w-10 h-10 text-accent" /> },
-    { name: "Flask", icon: <span className="w-10 h-10 text-accent">Flask</span> },
-  ];
-
-  const skillsAI = [
-    { name: "TensorFlow", icon: <SiTensorflow className="w-10 h-10 text-accent" /> },
-    { name: "PyTorch", icon: <SiPytorch className="w-10 h-10 text-accent" /> },
-    { name: "Hugging Face", icon: <SiHuggingface className="w-10 h-10 text-accent" /> },
-  ];
-
-  const skillsCloud = [
-    { name: "AWS", icon: <FaAws className="w-10 h-10 text-accent" /> },
-    { name: "GCP", icon: <SiGooglecloud className="w-10 h-10 text-accent" /> },
-  ];
-
-  const certifications = [
-    { name: "AWS Academy Cloud Practitioner", icon: <FaAws className="w-10 h-10 text-accent" /> },
-    { name: "Azure Fundamentals", icon: <span className="w-10 h-10 text-accent">Azure</span> },
-    { name: "Azure Developer", icon: <span className="w-10 h-10 text-accent">AzureDev</span> },
-    { name: "EDX CS50", icon: <FaGraduationCap className="w-10 h-10 text-accent" /> },
-  ];
-
+  // Helper function to render items from a skills category.
   const renderItems = (items) =>
     items.map((item, index) => {
       const initial = directions[index % directions.length];
@@ -49,7 +24,13 @@ export default function Skills() {
           transition={{ duration: 1, delay: index * 0.2 }}
           className="flex items-center gap-2"
         >
-          {item.icon}
+          {item.icon ? (
+            // If an icon URL is provided, use an img element
+            <img src={item.icon} alt={item.name} className="w-10 h-10" />
+          ) : (
+            // Otherwise, fallback to the React Icon (FaReact in this example)
+            <FaReact className="w-10 h-10 text-accent" />
+          )}
           <span>{item.name}</span>
         </motion.div>
       );
@@ -68,22 +49,22 @@ export default function Skills() {
 
       <div className="mb-6">
         <h3 className="text-2xl font-semibold mb-2">Programming & Frameworks</h3>
-        <div className="flex flex-wrap gap-4">{renderItems(skillsProgramming)}</div>
+        <div className="flex flex-wrap gap-4">{renderItems(skills.programming)}</div>
       </div>
 
       <div className="mb-6">
         <h3 className="text-2xl font-semibold mb-2">Machine Learning & AI</h3>
-        <div className="flex flex-wrap gap-4">{renderItems(skillsAI)}</div>
+        <div className="flex flex-wrap gap-4">{renderItems(skills.ai)}</div>
       </div>
 
       <div className="mb-6">
         <h3 className="text-2xl font-semibold mb-2">Cloud & DevOps</h3>
-        <div className="flex flex-wrap gap-4">{renderItems(skillsCloud)}</div>
+        <div className="flex flex-wrap gap-4">{renderItems(skills.cloud)}</div>
       </div>
 
       <div className="mb-6">
         <h3 className="text-2xl font-semibold mb-2">Certifications</h3>
-        <div className="flex flex-wrap gap-4">{renderItems(certifications)}</div>
+        <div className="flex flex-wrap gap-4">{renderItems(skills.certifications)}</div>
       </div>
     </motion.div>
   );
