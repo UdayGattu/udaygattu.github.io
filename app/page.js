@@ -1,6 +1,7 @@
 // app/page.js
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -44,12 +45,13 @@ export default function Home() {
           className="text-left"
         >
           <h2 className="text-2xl font-semibold text-primary">
-            Aspiring Machine Learning Engineer & AI Researcher
+            Machine Learning Engineer, AI Researcher &amp; AI Enthusiast
           </h2>
           <p className="mt-4 text-gray-700">
-            I specialize in building and deploying machine learning models,
-            leveraging cutting-edge AI research to solve real-world problems.
-            Passionate about data, innovation, and technology.
+            I build and deploy advanced machine learning models while
+            conducting cutting-edge AI research to drive transformative
+            innovation. Passionate about data, algorithms, and solving complex
+            problems.
           </p>
           <motion.a
             href="/contact"
@@ -62,63 +64,67 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* Dynamic Graphics Section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
-      >
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white p-6 rounded-lg shadow-lg"
-        >
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Graphic 1"
-            className="w-full h-40 object-cover rounded-md"
-          />
-          <h3 className="mt-4 text-xl font-bold text-primary">
-            Innovative AI Solutions
-          </h3>
-          <p className="mt-2 text-gray-600">
-            Utilizing state-of-the-art algorithms to drive next-gen AI
-            innovations.
-          </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white p-6 rounded-lg shadow-lg"
-        >
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Graphic 2"
-            className="w-full h-40 object-cover rounded-md"
-          />
-          <h3 className="mt-4 text-xl font-bold text-primary">
-            Data-Driven Insights
-          </h3>
-          <p className="mt-2 text-gray-600">
-            Harnessing data to transform business strategies and outcomes.
-          </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white p-6 rounded-lg shadow-lg"
-        >
-          <img
-            src="https://via.placeholder.com/300x200"
-            alt="Graphic 3"
-            className="w-full h-40 object-cover rounded-md"
-          />
-          <h3 className="mt-4 text-xl font-bold text-primary">
-            Cloud & Scalability
-          </h3>
-          <p className="mt-2 text-gray-600">
-            Deploying robust and scalable solutions on the cloud.
-          </p>
-        </motion.div>
-      </motion.div>
+      {/* Recent Work Experience Preview */}
+      <div className="mt-12">
+        <h2 className="text-3xl font-bold text-primary mb-4">Recent Work Experience</h2>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+          {/* Work Item 1 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img
+              src="https://via.placeholder.com/100x100?text=TCS"
+              alt="TCS Logo"
+              className="w-24 h-24 object-contain"
+            />
+            <h3 className="mt-4 text-xl font-semibold">TCS</h3>
+            <p className="mt-2 text-gray-600">ML Engineer | Jun 2022 – Aug 2023</p>
+          </div>
+          {/* Work Item 2 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img
+              src="https://via.placeholder.com/100x100?text=EduSkills"
+              alt="EduSkills Logo"
+              className="w-24 h-24 object-contain"
+            />
+            <h3 className="mt-4 text-xl font-semibold">EduSkills</h3>
+            <p className="mt-2 text-gray-600">AI-ML Intern | Jan 2022 – May 2022</p>
+          </div>
+        </div>
+        <div className="mt-4">
+          <Link href="/work" className="text-blue-600 hover:underline">
+            View More Work Experience
+          </Link>
+        </div>
+      </div>
+
+      {/* Recent Projects Preview */}
+      <div className="mt-12">
+        <h2 className="text-3xl font-bold text-primary mb-4">Recent Projects</h2>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+          {/* Project Item 1 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img
+              src="https://via.placeholder.com/200x150?text=Project+1"
+              alt="Project 1"
+              className="w-full md:w-1/3 h-40 object-cover rounded"
+            />
+            <h3 className="mt-4 text-xl font-semibold">Travel Agent Chatbot</h3>
+          </div>
+          {/* Project Item 2 */}
+          <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+            <img
+              src="https://via.placeholder.com/200x150?text=Project+2"
+              alt="Project 2"
+              className="w-full md:w-1/3 h-40 object-cover rounded"
+            />
+            <h3 className="mt-4 text-xl font-semibold">Text-to-Video Pipeline</h3>
+          </div>
+        </div>
+        <div className="mt-4">
+          <Link href="/projects" className="text-blue-600 hover:underline">
+            View More Projects
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

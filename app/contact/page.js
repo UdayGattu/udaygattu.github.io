@@ -11,8 +11,7 @@ export default function Contact() {
     >
       <h2 className="text-3xl font-bold mb-6 text-primary">Contact Me</h2>
       <p className="mb-4 text-gray-700">
-        I'm always open to discussing opportunities and collaborations. Feel
-        free to reach out!
+        I'm always open to discussing opportunities and collaborations. Feel free to reach out!
       </p>
       <ul className="text-gray-700">
         <li className="mb-2">
@@ -44,6 +43,17 @@ export default function Contact() {
             className="text-blue-600 hover:underline"
           >
             github.com/UdayGattu
+          </a>
+        </li>
+        <li className="mb-2">
+          <strong>Google Scholar:</strong>{" "}
+          <a
+            href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID
           </a>
         </li>
       </ul>
