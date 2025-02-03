@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 export const metadata = {
   title: "Uday Shankar Gattu Portfolio",
   description:
-    "Portfolio of Uday Shankar Gattu – Aspiring Machine Learning Engineer & AI Researcher",
+    "Portfolio of Uday Shankar Gattu – Machine Learning Engineer, AI Researcher, and AI Enthusiast",
 };
 
 export default function RootLayout({ children }) {
