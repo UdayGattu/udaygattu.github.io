@@ -9,14 +9,17 @@ export default function Work() {
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
+      className="px-4"
     >
-      <h2 className="text-3xl font-bold mb-6 text-accent">Work Experience</h2>
-      {workExperiences.map((work) => (
+      <h2 className="text-3xl font-bold mb-6 text-accent text-center">
+        Work Experience
+      </h2>
+      {workExperiences.map((work, index) => (
         <motion.div
           key={work.id}
-          initial={{ opacity: 0, x: work.id % 2 === 0 ? -50 : 50 }}
+          initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: index * 0.3 }}
           className="mb-8 flex flex-col md:flex-row items-center bg-secondary p-6 rounded-lg shadow-xl"
         >
           <img

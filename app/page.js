@@ -9,77 +9,82 @@ export default function Home() {
   const recentProjects = projects.slice(0, 2);
 
   return (
-    <div className="text-center">
-      {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="relative h-96 bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/hero.jpg')" }}
-      >
-        <motion.h1
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          className="text-5xl md:text-6xl font-extrabold text-accent drop-shadow-lg"
-        >
-          Hi, I'm Uday Shankar Gattu
-        </motion.h1>
-      </motion.div>
-
-      {/* Introduction & Profile Section */}
-      <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-8">
+    <div>
+      {/* Home Section */}
+      <section id="home">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shadow-xl"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="relative h-96 bg-cover bg-center flex items-center justify-center"
+          style={{ backgroundImage: "url('/hero.jpg')" }}
         >
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Profile Picture"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="text-left"
-        >
-          <h2 className="text-2xl font-semibold text-accent">
-            Machine Learning Engineer, AI Researcher &amp; AI Enthusiast
-          </h2>
-          <p className="mt-4 text-gray-300">
-            I build and deploy advanced machine learning models while
-            conducting cutting-edge AI research to drive transformative
-            innovation. Passionate about data, algorithms, and solving complex
-            problems.
-          </p>
-          <motion.a
-            href="/contact"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            className="mt-4 inline-block px-6 py-3 bg-accent text-secondary rounded hover:bg-red-700 transition-colors duration-300"
+          <motion.h1
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="text-5xl md:text-6xl font-extrabold text-accent drop-shadow-lg"
           >
-            Get In Touch
-          </motion.a>
+            Hi, I'm Uday Shankar Gattu
+          </motion.h1>
         </motion.div>
-      </div>
+        <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-8 px-4">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shadow-xl"
+          >
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Profile Picture"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="text-left max-w-lg"
+          >
+            <h2 className="text-2xl font-semibold text-accent">
+              Machine Learning Engineer, AI Researcher &amp; AI Enthusiast
+            </h2>
+            <p className="mt-4 text-gray-300">
+              I build and deploy advanced machine learning models while
+              conducting cutting-edge AI research to drive transformative
+              innovation. Passionate about data, algorithms, and solving complex
+              problems.
+            </p>
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="mt-4 inline-block px-6 py-3 bg-accent text-secondary rounded hover:bg-red-700 transition-colors duration-300"
+            >
+              Get In Touch
+            </motion.a>
+          </motion.div>
+        </div>
+      </section>
 
-      {/* Recent Work Experience Preview */}
-      <div className="mt-12">
-        <h2 className="text-3xl font-bold text-accent mb-4">
+      {/* Work Section */}
+      <section id="work" className="mt-16 px-4">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-3xl font-bold text-accent mb-4 text-center"
+        >
           Recent Work Experience
-        </h2>
+        </motion.h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-          {recentWork.map((work) => (
+          {recentWork.map((work, index) => (
             <motion.div
               key={work.id}
-              initial={{ opacity: 0, scale: 0.9, x: work.id % 2 === 0 ? -50 : 50 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: index * 0.3 }}
               className="bg-secondary p-6 rounded-lg shadow-xl flex flex-col items-center"
             >
               <img
@@ -96,25 +101,30 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-4 text-center">
           <Link href="/work" className="text-accent hover:underline">
             View All Work Experiences
           </Link>
         </div>
-      </div>
+      </section>
 
-      {/* Recent Projects Preview */}
-      <div className="mt-12">
-        <h2 className="text-3xl font-bold text-accent mb-4">
+      {/* Projects Section */}
+      <section id="projects" className="mt-16 px-4">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-3xl font-bold text-accent mb-4 text-center"
+        >
           Recent Projects
-        </h2>
+        </motion.h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-          {recentProjects.map((proj) => (
+          {recentProjects.map((proj, index) => (
             <motion.div
               key={proj.id}
-              initial={{ opacity: 0, scale: 0.9, y: proj.id % 2 === 0 ? 50 : -50 }}
+              initial={{ opacity: 0, scale: 0.9, y: index % 2 === 0 ? 50 : -50 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 1, delay: index * 0.3 }}
               className="bg-secondary p-6 rounded-lg shadow-xl flex flex-col items-center"
             >
               <img
@@ -128,12 +138,12 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-4 text-center">
           <Link href="/projects" className="text-accent hover:underline">
             View All Projects
           </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

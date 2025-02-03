@@ -1,32 +1,38 @@
 // app/contact/page.js
 "use client";
 import { motion } from "framer-motion";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/fa";
 
 const contactItems = [
   {
     label: "Email",
     value: "udaygattu9949@gmail.com",
     link: "mailto:udaygattu9949@gmail.com",
+    Icon: FaEnvelope,
   },
   {
     label: "Phone",
     value: "(617) 971-7892",
     link: "",
+    Icon: FaPhone,
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/udayshankargattu/",
     link: "https://www.linkedin.com/in/udayshankargattu/",
+    Icon: FaLinkedin,
   },
   {
     label: "GitHub",
     value: "github.com/UdayGattu",
     link: "https://github.com/UdayGattu",
+    Icon: FaGithub,
   },
   {
     label: "Google Scholar",
     value: "scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID",
     link: "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID",
+    Icon: FaGraduationCap,
   },
 ];
 
@@ -43,7 +49,7 @@ export default function Contact() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className="p-6"
+      className="p-6 px-4"
     >
       <h2 className="text-3xl font-bold mb-6 text-accent text-center">
         Contact Me
@@ -60,6 +66,7 @@ export default function Contact() {
       <div className="flex flex-col items-center gap-4">
         {contactItems.map((item, index) => {
           const initial = directions[index % directions.length];
+          const Icon = item.Icon;
           return (
             <motion.div
               key={item.label}
@@ -68,6 +75,7 @@ export default function Contact() {
               transition={{ duration: 1, delay: index * 0.3 }}
               className="flex items-center gap-2 text-gray-300"
             >
+              <Icon className="w-5 h-5" />
               <strong>{item.label}:</strong>
               {item.link ? (
                 <a

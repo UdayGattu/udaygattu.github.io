@@ -8,12 +8,12 @@ export default function CV() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className="p-6"
+      className="p-6 px-4"
     >
       <h2 className="text-3xl font-bold mb-6 text-accent text-center">
         My Resume / CV
       </h2>
-      <div className="flex justify-center">
+      <div className="flex flex-col items-center gap-4">
         <motion.iframe
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -22,15 +22,12 @@ export default function CV() {
           width="80%"
           height="600px"
           className="border-2 border-accent rounded-lg shadow-lg"
+        />
+        <a
+          href="/cv.pdf"
+          download
+          className="text-accent hover:underline text-center"
         >
-          Your browser does not support PDFs.{" "}
-          <a href="/cv.pdf" className="text-accent underline">
-            Download the PDF
-          </a>
-        </motion.iframe>
-      </div>
-      <div className="text-center mt-4">
-        <a href="/cv.pdf" download className="text-accent hover:underline">
           Download My Resume
         </a>
       </div>
