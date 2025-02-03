@@ -1,30 +1,9 @@
 // app/studies/page.js
 "use client";
 import { motion } from "framer-motion";
+import { studies } from "../../data"; // Import studies array from data.js
 
 export default function Studies() {
-  const studies = [
-    {
-      id: 1,
-      institution: "Northeastern University, Boston, MA",
-      degree: "Master of Science in Software Engineering Systems",
-      period: "Sept 2023 – May 2025",
-      details:
-        "Courses: Advanced Techniques with LLMs, Generative AI, NLP, Cloud Computing, Responsible AI, Algorithms. TA for Generative AI & NLP.",
-      logo: "https://via.placeholder.com/100?text=Northeastern",
-    },
-    {
-      id: 2,
-      institution:
-        "Goka Raju Ranga Raju Institute of Engineering and Technology, Hyderabad, India",
-      degree: "Bachelor of Technology in Mechanical Engineering",
-      period: "July 2018 – June 2022",
-      details:
-        "Focused on mechanical engineering principles with strong analytical and problem-solving skills.",
-      logo: "https://via.placeholder.com/100?text=GRR",
-    },
-  ];
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}

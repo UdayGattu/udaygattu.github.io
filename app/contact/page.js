@@ -1,40 +1,8 @@
 // app/contact/page.js
 "use client";
 import { motion } from "framer-motion";
+import { contactData } from "../../data";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/fa";
-
-const contactItems = [
-  {
-    label: "Email",
-    value: "udaygattu9949@gmail.com",
-    link: "mailto:udaygattu9949@gmail.com",
-    Icon: FaEnvelope,
-  },
-  {
-    label: "Phone",
-    value: "(617) 971-7892",
-    link: "",
-    Icon: FaPhone,
-  },
-  {
-    label: "LinkedIn",
-    value: "linkedin.com/in/udayshankargattu/",
-    link: "https://www.linkedin.com/in/udayshankargattu/",
-    Icon: FaLinkedin,
-  },
-  {
-    label: "GitHub",
-    value: "github.com/UdayGattu",
-    link: "https://github.com/UdayGattu",
-    Icon: FaGithub,
-  },
-  {
-    label: "Google Scholar",
-    value: "scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID",
-    link: "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID",
-    Icon: FaGraduationCap,
-  },
-];
 
 const directions = [
   { x: -50, opacity: 0 },
@@ -64,9 +32,29 @@ export default function Contact() {
         free to reach out!
       </motion.p>
       <div className="flex flex-col items-center gap-4">
-        {contactItems.map((item, index) => {
+        {contactData.map((item, index) => {
           const initial = directions[index % directions.length];
-          const Icon = item.Icon;
+          // Map label to an icon (React Icons)
+          let IconComponent;
+          switch (item.label) {
+            case "Email":
+              IconComponent = FaEnvelope;
+              break;
+            case "Phone":
+              IconComponent = FaPhone;
+              break;
+            case "LinkedIn":
+              IconComponent = FaLinkedin;
+              break;
+            case "GitHub":
+              IconComponent = FaGithub;
+              break;
+            case "Google Scholar":
+              IconComponent = FaGraduationCap;
+              break;
+            default:
+              IconComponent = FaEnvelope;
+          }
           return (
             <motion.div
               key={item.label}
@@ -75,7 +63,7 @@ export default function Contact() {
               transition={{ duration: 1, delay: index * 0.3 }}
               className="flex items-center gap-2 text-gray-300"
             >
-              <Icon className="w-5 h-5" />
+              <IconComponent className="w-5 h-5" />
               <strong>{item.label}:</strong>
               {item.link ? (
                 <a
