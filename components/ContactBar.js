@@ -8,7 +8,7 @@ export default function ContactBar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-secondary text-white text-sm py-2 px-4 flex justify-center space-x-4"
+      className="bg-primary text-white text-sm py-2 px-4 flex justify-center gap-4"
     >
       <span>
         Email:{" "}
