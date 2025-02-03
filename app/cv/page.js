@@ -14,22 +14,23 @@ export default function CV() {
         My Resume / CV
       </h2>
       <div className="flex flex-col items-center gap-4">
-        <motion.iframe
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          src="/cv.pdf"
-          width="80%"
-          height="600px"
-          className="border-2 border-accent rounded-lg shadow-lg"
-        />
-        <a
-          href="/cv.pdf"
-          download
-          className="text-accent hover:underline text-center"
-        >
-          Download My Resume
-        </a>
+      <motion.iframe
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+  src="cv.pdf"   // Relative path; this tells the browser to look in the current directory.
+  width="80%"
+  height="600px"
+  className="border-2 border-accent rounded-lg shadow-lg"
+/>
+<a
+  href="cv.pdf"
+  download
+  className="text-accent hover:underline text-center"
+>
+  Download My Resume
+</a>
+
       </div>
     </motion.div>
   );
