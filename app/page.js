@@ -36,7 +36,7 @@ export default function Home() {
             className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shadow-xl"
           >
             <img
-              src="https://via.placeholder.com/150"
+              src="/images/page/ProfilePic.jpg"
               alt="Profile Picture"
               className="w-full h-full object-cover"
             />

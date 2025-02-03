@@ -11,7 +11,7 @@ export const workExperiences = [
         "Developed ML-powered applications using Python and Flask, achieving a 25% improvement in deployment efficiency.",
         "Optimized ML pipelines to reduce model training time by 40%."
       ],
-      logo: "/images/tcs-logo.png"
+      logo: "/images/work/TCSLogo.png"
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export const workExperiences = [
         "Enhanced model accuracy by 30% using Amazon SageMaker.",
         "Deployed scalable AI solutions on AWS, increasing operational efficiency by 25%."
       ],
-      logo: "/images/eduskills-logo.png"
+      logo: "/images/work/EduSkillsLogo.png"
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ export const workExperiences = [
         "Developed TensorFlow models for mask detection achieving 95% accuracy.",
         "Improved performance by 20% through advanced image processing techniques."
       ],
-      logo: "/images/xaneai-logo.png"
+      logo: "/images/work/XaneaiLogo.avif"
     }
   ];
   
@@ -80,7 +80,7 @@ export const workExperiences = [
       degree: "Master of Science in Software Engineering Systems",
       period: "Sept 2023 – May 2025",
       details: "Courses: Advanced Techniques with LLMs, Generative AI, NLP, Cloud Computing, Responsible AI, Algorithms. TA for Generative AI & NLP.",
-      logo: "/images/northeastern.png" // Replace with your university logo when available
+      logo: "/images/studies/NortheasternUniversityLogo.png" // Replace with your university logo when available
     },
     {
       id: 2,
@@ -88,33 +88,72 @@ export const workExperiences = [
       degree: "Bachelor of Technology in Mechanical Engineering",
       period: "July 2018 – June 2022",
       details: "Focused on mechanical engineering principles with strong analytical and problem-solving skills.",
-      logo: "/images/grr.png" // Replace with your college logo when available
+      logo: "/images/studies/GrietLogo.jpeg" // Replace with your college logo when available
     }
   ];
   
-  export const skills = {
+ // data.js
+
+// data.js
+// data.js
+
+// data.js
+
+export const skills = {
     programming: [
-      { name: "Python", icon: "/images/icons/python.png" }, // Use an image URL if available
-      { name: "JavaScript", icon: "/images/icons/javascript.png" },
-      { name: "CSS", icon: "/images/icons/css.png" },
-      { name: "Flask" } // No icon provided; fallback to React Icon will be used
+      { name: "Python", icon: "/images/icons/python.png" },
+      { name: "MySQL", icon: "/images/icons/mysql.png" },
+      { name: "Fast API" },    // No image provided; fallback used
+      { name: "Django" },      // No image provided; fallback used
+      { name: "C++" },         // No image provided; fallback used
+      { name: "Java" }         // No image provided; fallback used
     ],
     ai: [
-      { name: "TensorFlow", icon: "/images/icons/tensorflow.png" },
       { name: "PyTorch", icon: "/images/icons/pytorch.png" },
-      { name: "Hugging Face" } // Fallback will be used
+      { name: "TensorFlow", icon: "/images/icons/tensorflow.png" },
+      { name: "Scikit-learn", icon: "/images/icons/scikitlearn.png" },
+      "LLMs",
+      "Fine-tuning",
+      "Transformers",
+      "BERT",
+      "GPT",
+      "GANs",
+      "Reinforcement Learning",
+      "Encodings",
+      "RAG",
+      "LLM Agents",
+      "Prompt Engineering",
+      "LangChain"
+    ],
+    mlFrameworks: [
+      "CNN",
+      "LSTM",
+      { name: "Hugging Face", icon: "/images/icons/huggingface.png" },
+      "Stable Diffusion",
+      "Deep Learning",
+      "Data Science",
+      "OpenCV",
+      { name: "Flask", icon: "/images/icons/flask.png" }
     ],
     cloud: [
       { name: "AWS", icon: "/images/icons/aws.png" },
-      { name: "GCP", icon: "/images/icons/gcp.png" }
+      { name: "GCP", icon: "/images/icons/gcp.png" },
+      "Vertex AI",
+      "Azure",
+      "Amazon Sage Maker",
+      "Git",
+      "Azure DevOps"
     ],
     certifications: [
       { name: "AWS Academy Cloud Practitioner", icon: "/images/icons/aws.png" },
-      { name: "Azure Fundamentals" }, // Fallback will be used
-      { name: "Azure Developer" },    // Fallback will be used
+      "Microsoft Azure Fundamentals",
+      "Microsoft Azure Developer",
       { name: "EDX CS50", icon: "/images/icons/cs50.png" }
     ]
   };
+  
+  // (Other arrays for workExperiences, projects, studies, and contactData can be defined here as needed.)
+  
   
   export const contactData = [
     {
