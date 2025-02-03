@@ -13,23 +13,26 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex space-x-6">
-          <Link href="/" className="hover:text-secondary transition-colors duration-300 cursor-pointer">
+          <Link href="/" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Home
           </Link>
-          <Link href="/work" className="hover:text-secondary transition-colors duration-300 cursor-pointer">
+          <Link href="/work" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Work
           </Link>
-          <Link href="/skills" className="hover:text-secondary transition-colors duration-300 cursor-pointer">
+          <Link href="/skills" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Skills
           </Link>
-          <Link href="/projects" className="hover:text-secondary transition-colors duration-300 cursor-pointer">
+          <Link href="/projects" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Projects
           </Link>
-          <Link href="/contact" className="hover:text-secondary transition-colors duration-300 cursor-pointer">
+          <Link href="/contact" className="hover:text-accent transition-colors duration-300 cursor-pointer">
             Contact
           </Link>
+          <Link href="/cv" className="hover:text-accent transition-colors duration-300 cursor-pointer">
+            Resume
+          </Link>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center gap-4">
           <motion.a
             href="https://www.linkedin.com/in/udayshankargattu/"
             target="_blank"

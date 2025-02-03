@@ -1,4 +1,4 @@
-// // tailwind.config.mjs
+// tailwind.config.mjs
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,17 +8,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0D3B66",   // Rich deep blue for headings and text
-        secondary: "#F4D35E", // Warm mustard yellow for highlights
-        accent: "#FA7921",    // Vibrant orange for buttons and accents
+        primary: "#D32F2F",    /* Vibrant red */
+        secondary: "#212121",  /* Dark grey/black background */
+        accent: "#FFFFFF",     /* White accents */
       },
       animation: {
         fadeIn: "fadeIn 1.5s ease-in-out",
+        slideIn: "slideIn 1s ease-out",
       },
       keyframes: {
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
+        },
+        slideIn: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
     },
