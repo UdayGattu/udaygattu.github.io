@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Typewriter from "typewriter-effect";
 import { workExperiences, projects } from "../data";
 
 export default function Home() {
@@ -23,13 +24,20 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Hi, I'm Uday Shankar Gattu
+            <Typewriter
+              options={{
+                strings: ["Hi, I'm Uday Shankar Gattu"],
+                autoStart: true,
+                loop: false,
+                delay: 75,
+              }}
+            />
           </motion.h1>
         </motion.div>
 
         {/* Profile & Description Section */}
         <div className="flex flex-row items-center justify-center gap-6 px-6 mt-0">
-          {/* Profile Picture (Larger Size) */}
+          {/* Larger Profile Picture */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -91,7 +99,8 @@ export default function Home() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: index * 0.3 }}
-                className="bg-secondary p-6 rounded-lg shadow-xl flex flex-col items-center cursor-pointer hover:scale-105 transition-transform duration-300"
+                className="bg-secondary p-6 rounded-lg shadow-2xl flex flex-col items-center cursor-pointer hover:scale-105 transition-transform duration-300"
+                style={{ boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.25)" }} // Smooth floating effect
               >
                 <img
                   src={work.logo || "https://via.placeholder.com/100x100"}
@@ -100,6 +109,40 @@ export default function Home() {
                 />
                 <h3 className="mt-2 text-xl font-semibold text-accent">
                   {work.role} at {work.company}
+                </h3>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="mt-12 px-4">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-3xl font-bold text-accent mb-4 text-center"
+        >
+          Projects
+        </motion.h2>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+          {recentProjects.map((proj, index) => (
+            <Link key={proj.id} href="/projects">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: index % 2 === 0 ? 50 : -50 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1, delay: index * 0.3 }}
+                className="bg-secondary p-6 rounded-lg shadow-2xl flex flex-col items-center cursor-pointer hover:scale-105 transition-transform duration-300"
+                style={{ boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.25)" }} // Floating effect
+              >
+                <img
+                  src={proj.image || "https://via.placeholder.com/200x150"}
+                  alt={proj.title}
+                  className="w-full md:w-1/3 h-40 object-cover rounded"
+                />
+                <h3 className="mt-2 text-xl font-semibold text-accent">
+                  {proj.title}
                 </h3>
               </motion.div>
             </Link>
