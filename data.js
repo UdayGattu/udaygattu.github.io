@@ -45,7 +45,7 @@ export const workExperiences = [
       title: "Travel Agent Chatbot",
       techStack: "Fast API, LangChain, Transformers, GPT, MySQL, PyTorch, NLP-SQL",
       description: "Developed a chatbot to handle real-time inquiries, increasing booking conversions by 25% and integrating MLOps principles.",
-      image: "/images/travel-chatbot.png",
+      image: "/images/projects/TravelAgent.png",
       github: "https://github.com/yourusername/travel-agent-chatbot"
     },
     {
@@ -53,7 +53,7 @@ export const workExperiences = [
       title: "Text-to-Video Generation Pipeline",
       techStack: "Fast API, LangChain, Transformers, RAG, OpenAI API, TensorFlow, PyTorch, Runway AI",
       description: "Built an innovative pipeline to convert textual descriptions into dynamic video content, improving accuracy by 30% and reducing generation time by 25%.",
-      image: "/images/text-to-video.png",
+      image: "/images/projects/TextToVideo.webp",
       github: "https://github.com/yourusername/text-to-video"
     },
     {
@@ -61,14 +61,14 @@ export const workExperiences = [
       title: "Script2Skin: Generating Medical Images",
       techStack: "Stable Diffusion, Hugging Face, CLIP, GCP, Transformers, U-Net, PyTorch",
       description: "Developed an AI model to generate high-quality dermatological images from textual inputs, thereby improving diagnostic dataset quality.",
-      image: "/images/script2skin.png"
+      image: "/images/projects/SkinScript.webp"
     },
     {
       id: 4,
       title: "Cloud-Native Application",
       techStack: "JavaScript, GCP, Terraform, Packer, MySQL",
       description: "Created a cloud-native application with automated VM deployments, achieving a 50% reduction in deployment times and maintaining 99.9% uptime.",
-      image: "/images/cloud-native.png",
+      image: "/images/projects/cloud.webp",
       github: "https://github.com/yourusername/cloud-native-app"
     }
   ];
@@ -182,4 +182,3 @@ export const skills = {
       link: "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
     }
   ];
-  
