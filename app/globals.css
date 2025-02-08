@@ -1,9 +1,16 @@
-/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Global Styles */
-body {
-  font-family: 'Inter', sans-serif;
+/* Custom theme colors */
+.bg-dark {
+  background-color: #000;
+}
+
+.bg-secondary {
+  background-color: #1f2937; /* dark gray */
+}
+
+.text-accent {
+  color: #00bcd4; /* neon blue accent */
 }
