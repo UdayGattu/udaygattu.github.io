@@ -35,10 +35,10 @@ export default function Hero() {
               options={{
                 strings: ["Hi, I'm Uday Shankar Gattu"],
                 autoStart: true,
-                loop: false,
+                loop: true,
                 delay: 75,
-                pauseFor: 1000000,
-              }}
+                pauseFor: 10,
+            }}
             />
           </motion.h1>
           <p className="mt-4 text-xl">
