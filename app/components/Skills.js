@@ -2,8 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { skills } from "../../data";
-import { FaReact } from "react-icons/fa";
-import { FaPython, FaAws, FaGitAlt, FaJava } from "react-icons/fa";
+import { FaReact, FaPython, FaAws, FaGitAlt } from "react-icons/fa";
 import {
   SiMysql,
   SiDjango,
@@ -13,6 +12,7 @@ import {
   SiScikitlearn,
   SiGooglecloud,
   SiFlask,
+  SiJava,
 } from "react-icons/si";
 
 // Fallback mapping for React icons
@@ -22,7 +22,7 @@ const fallbackMapping = {
   "Fast API": SiFlask,
   "Django": SiDjango,
   "C++": SiCplusplus,
-  "Java": FaJava,
+  "Java": SiJava, // Using SiJava instead of FaJava for better support
   "PyTorch": SiPytorch,
   "TensorFlow": SiTensorflow,
   "Scikit-learn": SiScikitlearn,
@@ -45,8 +45,9 @@ function SkillItem({ skill, delay }) {
     <motion.div
       initial={{ opacity: 0, x: -10 }}
       animate={{ opacity: 1, x: 0 }}
+      whileHover={{ scale: 1.15, rotate: 3 }}
       transition={{ duration: 0.5, delay: delay * 0.1 }}
-      className="flex items-center gap-2 p-3 rounded-lg shadow-md hover:scale-105 transition"
+      className="flex items-center gap-2 p-3 rounded-lg shadow-md hover:shadow-xl transition-all"
     >
       {uploadedIcon && !imgError ? (
         <img
