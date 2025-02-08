@@ -1,5 +1,7 @@
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import AnimateMain from "./components/AnimateMain";
 import "../styles/globals.css";
-import Navbar from "../components/Navbar";
 
 export const metadata = {
   title: "Uday Shankar Gattu Portfolio",
@@ -9,12 +11,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen bg-black text-white">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{metadata.title}</title>
+      </head>
+      <body className="bg-dark text-white flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow container mx-auto p-6">{children}</main>
-        <footer className="bg-gray-900 text-white text-center py-4">
-          © {new Date().getFullYear()} Uday Shankar Gattu. All Rights Reserved.
-        </footer>
+        <AnimateMain>{children}</AnimateMain>
+        <Footer />
       </body>
     </html>
   );

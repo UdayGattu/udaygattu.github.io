@@ -2,27 +2,22 @@
   "name": "udaygattu.github.io",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "gh-pages -d out",
-    "build": "next build && next export",
     "dev": "next dev",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "framer-motion": "^10.18.0",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-icons": "^5.4.0",
-    "react-social-icons": "^6.22.0",
-    "typewriter-effect": "^2.21.0"
+    "framer-motion": "^10.12.16",
+    "next": "15.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-scroll": "^1.8.9",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.4.18",
-    "tailwindcss": "^3.1.8",
-    "tailwindcss-animate": "^1.0.7"
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }

@@ -1,5 +1,4 @@
-// app/contact/page.js
-"use client";
+// components/Contact.js
 import { motion } from "framer-motion";
 import { contactData } from "../../data";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaGraduationCap } from "react-icons/fa";
@@ -14,27 +13,24 @@ const directions = [
 export default function Contact() {
   return (
     <motion.div
+      id="contact"
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className="p-6 px-4"
+      className="p-6 bg-dark"
     >
-      <h2 className="text-3xl font-bold mb-6 text-accent text-center">
-        Contact Me
-      </h2>
+      <h2 className="text-3xl font-bold mb-6 text-accent text-center">Contact Me</h2>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
         className="mb-4 text-gray-300 text-center"
       >
-        I'm always open to discussing opportunities and collaborations. Feel
-        free to reach out!
+        I'm always open to discussing opportunities and collaborations. Feel free to reach out!
       </motion.p>
       <div className="flex flex-col items-center gap-4">
         {contactData.map((item, index) => {
           const initial = directions[index % directions.length];
-          // Map label to an icon (React Icons)
           let IconComponent;
           switch (item.label) {
             case "Email":
@@ -66,12 +62,7 @@ export default function Contact() {
               <IconComponent className="w-5 h-5" />
               <strong>{item.label}:</strong>
               {item.link ? (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-accent"
-                >
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">
                   {item.value}
                 </a>
               ) : (
