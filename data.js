@@ -147,7 +147,7 @@ export const workExperiences = [
     company: "Edu Skills",
     role: "AI-ML Engineer Intern",
     location: "India",
-    period: "June 2020 – September 2020",
+    period: "January 2022 – May 2022",
     description: [
       "Developed and optimized ML models using Amazon SageMaker, improving accuracy and performance by 30%.",
       "Deployed AI solutions on AWS using EC2, S3, and Lambda, increasing operational efficiency by 25%.",
@@ -160,7 +160,7 @@ export const workExperiences = [
     company: "The Sparks Foundation",
     role: "Data Science and Business Analytics Intern",
     location: "India",
-    period: "June 2020 – September 2020",
+    period: "October 2020 – November 2020",
     description: [
       "Developed predictive models using supervised learning to improve forecasting accuracy.",
       "Applied unsupervised learning techniques such as clustering and decision trees to enhance data-driven decision making.",
