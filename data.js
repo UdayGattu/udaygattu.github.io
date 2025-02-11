@@ -166,7 +166,7 @@ export const workExperiences = [
       "Applied unsupervised learning techniques such as clustering and decision trees to enhance data-driven decision making.",
       "Built a stock market analysis pipeline integrating numerical and textual data, boosting trend forecasting efficiency."
     ],
-    logo: "/images/work/SparksFoundationLogo.png" // Ensure you have this logo or adjust the path.
+    logo: "/images/work/SparkFoundation.png" // Ensure you have this logo or adjust the path.
   },
   {
     id: 7,
