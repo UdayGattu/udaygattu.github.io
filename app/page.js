@@ -1,6 +1,6 @@
 "use client";
 import Hero from "./components/Hero";
-import WorkExperience from "./components/Work";
+import WorkSlider from "./components/WorkSlider";
 import Education from "./components/Education";
 import SkillsPage from "./components/Skills";
 import Projects from "./components/Projects";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="pt-16">
       <Hero />
-      <WorkExperience />
+      <WorkSlider />
       <Education />
       <SkillsPage />
       <Projects />
@@ -20,3 +20,6 @@ export default function Home() {
     </div>
   );
 }
+
+// ...
+

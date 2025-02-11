@@ -17,7 +17,7 @@ export const studies = [
     degree: "CS50 Introduction to Computer Science",
     period: "October 2022",
     details: "",
-    logo: "/images/studies/HarvardLogo.png" // Update with your Harvard logo or remove this field if unavailable.
+    logo: "/images/studies/Harvard.webp" // Update with your Harvard logo or remove this field if unavailable.
   },
   {
     id: 3,
@@ -100,7 +100,7 @@ export const workExperiences = [
       "Developing hands-on assignments, real-world case studies, and instructional videos, increasing engagement and practical accuracy by 30%.",
       "Streamlining attendance and troubleshooting processes, reducing coursework-related queries by 35%."
     ],
-    logo: "/images/work/NortheasternUniversityLogo.png"
+    logo: "/images/work/Neu.png"
   },
   {
     id: 2,
@@ -113,7 +113,7 @@ export const workExperiences = [
       "Designed and refined course materials to ensure clarity and industry alignment.",
       "Delivered detailed feedback on assignments and projects, bridging theoretical knowledge with real-world applications."
     ],
-    logo: "/images/work/NortheasternUniversityLogo.png"
+    logo: "/images/work/Neu.png"
   },
   {
     id: 3,
@@ -188,67 +188,146 @@ export const projects = [
   {
     id: 1,
     title: "Image Alchemist: AI-Driven eCommerce Image Enhancement",
-    techStack: "Fast API, Streamlit, YOLOv8, OpenCV, Stable Diffusion, GANs, Pillow, NumPy",
-    description:
-      "Enhanced product images by improving clarity, shadows, and positioning. Automated background generation with multiple styles reduced manual editing time by 40%, while an interactive system enabled real-time enhancements.",
-    image: "/images/projects/ImageAlchemist.png",
-    link: "https://yourlink.com/image-alchemist" // Replace with the actual project link
+    description: [
+      "Enhanced product images by improving clarity, shadows, and positioning.",
+      "Automated background generation with multiple styles reduced manual editing time by 40%.",
+      "An interactive system enabled real-time enhancements."
+    ],
+    techStack: [
+      "Fast API", 
+      "Streamlit", 
+      "YOLOv8", 
+      "OpenCV", 
+      "Stable Diffusion", 
+      "GANs", 
+      "Pillow", 
+      "NumPy"
+    ],
+    image: "/images/projects/ImageAlchemist.jpg",
+    link: "https://github.com/UdayGattu/ImageAlchemist-fork.git"
   },
   {
     id: 2,
     title: "Innovative Text-to-Video System for Multi-Modal Content Creation",
-    techStack: "Fast API, LangChain, Transformers, RAG, OpenAI API, Model Scope, TensorFlow, PyTorch, Runway AI",
-    description:
-      "Built a text-to-video system using RAG and fine-tuned models that increased video generation accuracy by 30%. Evaluated multi-modal tools and developed APIs for seamless SaaS integration, reducing content delivery time by 20%.",
-    image: "/images/projects/TextToVideoSystem.png",
-    link: "https://yourlink.com/text-to-video-system"
+    description: [
+      "Built a text-to-video system using RAG and fine-tuned models that increased video generation accuracy by 30%.",
+      "Evaluated multi-modal tools and developed APIs for seamless SaaS integration.",
+      "Reduced content delivery time by 20%."
+    ],
+    techStack: [
+      "Fast API", 
+      "Lang Chain", 
+      "Transformers", 
+      "RAG", 
+      "OpenAI API", 
+      "Model Scope", 
+      "TensorFlow", 
+      "PyTorch", 
+      "Runway AI"
+    ],
+    image: "/images/projects/TextToVideo.webp",
+    link: "https://github.com/GenAIByUdayGattu/TextToVideo.git"
   },
   {
     id: 3,
     title: "Interactive AI-based Tutor for Physics Education",
-    techStack: "Fast API, LangChain, Transformers, RAG, OpenAI API, PyTorch, MySQL",
-    description:
-      "Developed an AI-driven Physics Tutor Bot that boosted student engagement by 40%. Integrated real-world application modules and dynamic Q&A with adaptive hints to improve comprehension and reduce query resolution time by 30%.",
-    image: "/images/projects/PhysicsTutor.png",
-    link: "https://yourlink.com/physics-tutor"
+    description: [
+      "Developed an AI-driven Physics Tutor Bot that boosted student engagement by 40%.",
+      "Integrated real-world application modules and dynamic Q&A with adaptive hints.",
+      "Improved comprehension and reduced query resolution time by 30%."
+    ],
+    techStack: [
+      "Fast API", 
+      "Lang Chain", 
+      "Transformers", 
+      "RAG", 
+      "OpenAI API", 
+      "PyTorch", 
+      "MySQL"
+    ],
+    image: "/images/projects/Physics.webp",
+    link: "https://github.com/UdayGattu/TutorGPT.git"
   },
   {
     id: 4,
     title: "AutoMate: AI-Powered Car Assistant",
-    techStack: "Voiceflow, AI Chatbot, NLP, Fast API, JSON, Dialog Management",
-    description:
-      "Created a virtual assistant for car companies that automated scheduling, reducing manual booking efforts by 60%. Integrated error-handling workflows to decrease user drop-off rates by 35% and improved conversation success by 50%.",
-    image: "/images/projects/AutoMate.png",
-    link: "https://yourlink.com/automate-car-assistant"
+    description: [
+      "Created a virtual assistant for car companies that automated scheduling, reducing manual booking efforts by 60%.",
+      "Integrated error-handling workflows to decrease user drop-off rates by 35%.",
+      "Improved conversation success by 50%."
+    ],
+    techStack: [
+      "Voiceflow", 
+      "AI Chatbot", 
+      "NLP", 
+      "Fast API", 
+      "JSON", 
+      "Dialog Management"
+    ],
+    image: "/images/projects/AutoMate.webp",
+    link: "https://creator.voiceflow.com/prototype/670284f0258e07e042be4152"
   },
   {
     id: 5,
     title: "Cloud-Native Application (GCP)",
-    techStack: "JavaScript, GCP, Postman, GitHub, Terraform, Packer, MySQL",
-    description:
-      "Automated GCP infrastructure using Terraform, reducing VM setup times by 50%. Secured resources via VPC peering and encryption, cutting deployment errors by 40% and integrating CI/CD pipelines for seamless updates.",
-    image: "/images/projects/CloudNativeApp.png",
-    link: "https://yourlink.com/cloud-native-app"
+    description: [
+      "Automated GCP infrastructure using Terraform, reducing VM setup times by 50%.",
+      "Secured resources via VPC peering and encryption, cutting deployment errors by 40%.",
+      "Integrated CI/CD pipelines for seamless updates."
+    ],
+    techStack: [
+      "JavaScript", 
+      "GCP", 
+      "Postman", 
+      "GitHub", 
+      "Terraform", 
+      "Packer", 
+      "MySQL"
+    ],
+    image: "/images/projects/cloud.webp",
+    link: "https://github.com/orgs/CloudUday/repositories"
   },
   {
     id: 6,
     title: "Dermatological Image Generation Using Latent Diffusion Models",
-    techStack: "Stable Diffusion, Hugging Face, CLIP, GCP, Transformers, U-Net, PyTorch",
-    description:
-      "Developed text-to-image models using CLIP and Stable Diffusion to enhance healthcare datasets by 20%. Built scalable pipelines on GCP that transform textual inputs into photorealistic diagnostic images, with added predictive titling for streamlined reports.",
-    image: "/images/projects/DermatologicalImageGen.png",
-    link: "https://yourlink.com/dermatological-image-gen"
+    description: [
+      "Developed text-to-image models using CLIP and Stable Diffusion to enhance healthcare datasets by 20%.",
+      "Built scalable pipelines on GCP for photorealistic diagnostic images.",
+      "Added predictive titling for streamlined reports."
+    ],
+    techStack: [
+      "Stable Diffusion", 
+      "Hugging Face", 
+      "Clip", 
+      "GCP", 
+      "Transformers", 
+      "Unet", 
+      "PyTorch"
+    ],
+    image: "/images/projects/SkinScript.webp"
   },
   {
     id: 7,
     title: "Travel Agent Chatbot",
-    techStack: "Python, LangChain, Fast API, MySQL, Transformers, NLP-SQL, PyTorch",
-    description:
-      "Designed an AI-powered travel chatbot that automated real-time inquiries, boosting user engagement by 30%. Developed a custom NLP Query-SQL engine for dynamic database interactions, leading to a 25% increase in booking conversions.",
+    description: [
+      "Designed an AI-powered travel chatbot that automated real-time inquiries, boosting user engagement by 30%.",
+      "Developed a custom NLP Query-SQL engine for dynamic database interactions.",
+      "Increased booking conversions by 25%."
+    ],
+    techStack: [
+      "Python", 
+      "LangChain", 
+      "Fast API", 
+      "MySQL", 
+      "Transformers", 
+      "NLP SQL", 
+      "PyTorch"
+    ],
     image: "/images/projects/TravelAgent.png",
-    link: "https://yourlink.com/travel-agent-chatbot"
+    link: "https://github.com/UdayGattu/travel-bot-fork.git"
   }
 ];
+
 
 // CONTACT INFORMATION
 export const contactData = [
@@ -275,13 +354,9 @@ export const contactData = [
   {
     label: "Google Scholar",
     value: "Google Scholar",
-    link: "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
+    link: "https://scholar.google.com/citations?user=rPCfZOgAAAAJ&hl=en&oi=ao"
   },
-  {
-    label: "Portfolio",
-    value: "Portfolio",
-    link: "https://yourportfolio.com" // Replace with your actual portfolio URL
-  }
+
 ];
 
 // RESEARCH EXPERIENCE
