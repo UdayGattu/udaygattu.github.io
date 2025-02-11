@@ -1,6 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { workExperiences } from "../../data";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -31,26 +31,16 @@ function groupByCompany(experiences) {
 }
 
 export default function WorkExperience() {
-  const sliderRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const groupedExperiences = groupByCompany(workExperiences);
   const totalSlides = groupedExperiences.length;
 
-  useEffect(() => {
-    if (sliderRef.current) {
-      const scrollAmount = sliderRef.current.clientWidth * currentSlide;
-      sliderRef.current.scrollTo({ left: scrollAmount, behavior: "smooth" });
-    }
-  }, [currentSlide]);
-
-  // Scroll Left (Only Moves One Step at a Time)
-  const handleLeft = () => {
-    setCurrentSlide((prev) => Math.max(prev - 1, 0));
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
   };
 
-  // Scroll Right (Only Moves One Step at a Time)
-  const handleRight = () => {
-    setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
 
   return (
@@ -58,110 +48,105 @@ export default function WorkExperience() {
       <h2 className="text-3xl font-bold text-center text-accent mb-8">
         Work Experience
       </h2>
-      <div className="relative max-w-[98vw] mx-auto px-6">
-        {/* Left Scroll Button (Outside Work Cards) */}
+
+      <div className="relative w-full flex justify-center items-center overflow-hidden">
+        {/* Left Scroll Button */}
         <button
-          onClick={handleLeft}
-          disabled={currentSlide === 0}
-          className="absolute top-1/2 -translate-y-1/2 left-[-50px] z-10 p-3 bg-secondary rounded-full text-white hover:bg-accent transition disabled:opacity-50"
+          onClick={handlePrev}
+          className="absolute left-4 text-white bg-accent p-3 rounded-full shadow-md hover:scale-110 transition"
         >
-          <FaArrowLeft size={25} />
-        </button>
-        
-        {/* Right Scroll Button (Outside Work Cards) */}
-        <button
-          onClick={handleRight}
-          disabled={currentSlide === totalSlides - 1}
-          className="absolute top-1/2 -translate-y-1/2 right-[-50px] z-10 p-3 bg-secondary rounded-full text-white hover:bg-accent transition disabled:opacity-50"
-        >
-          <FaArrowRight size={25} />
+          <FaArrowLeft size={20} />
         </button>
 
-        {/* Slider Wrapper */}
-        <div ref={sliderRef} className="overflow-hidden w-full">
-          <motion.div
-            className="flex"
-            animate={{ x: `-${currentSlide * 100}%` }}
-            transition={{ type: "spring", stiffness: 100, damping: 15 }}
-          >
-            {groupedExperiences.map((group, index) => (
-              <motion.div
-                key={index}
-                className="min-w-full bg-secondary rounded-lg p-6 shadow-md flex items-center justify-between"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                style={{ height: "550px", width: "95vw" }}
-              >
-                {/* Left Side: Company Logo */}
-                <div className="w-[20%] flex items-center justify-center">
-                  <Image
-                    src={group.experiences[0].logo || "https://via.placeholder.com/150"}
-                    alt={`${group.company} Logo`}
-                    width={180}
-                    height={180}
-                    className="object-contain"
-                  />
-                </div>
+        {/* Work Experience Card */}
+        <div className="w-full max-w-5xl overflow-hidden flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={groupedExperiences[currentIndex].company}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.6 }}
+              className="w-full bg-secondary rounded-lg shadow-lg flex items-center p-6"
+            >
+              {/* Left Side: Company Logo */}
+              <div className="w-[20%] flex items-center justify-center">
+                <Image
+                  src={groupedExperiences[currentIndex].experiences[0].logo || "https://via.placeholder.com/150"}
+                  alt={`${groupedExperiences[currentIndex].company} Logo`}
+                  width={180}
+                  height={180}
+                  className="object-contain"
+                />
+              </div>
 
-                {/* Right Side: Work Experience Details */}
-                <div className="w-[75%]">
-                  <h3 className="text-3xl font-bold text-accent mb-2">
-                    {group.company}
-                  </h3>
-                  {group.experiences.length > 1 ? (
-                    <div className="space-y-3">
-                      {group.experiences.map((exp, i) => (
-                        <motion.div
-                          key={i}
-                          className="border-b border-gray-600 pb-2"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ duration: 0.3, delay: i * 0.1 }}
-                        >
-                          <p className="text-xl text-gray-300 font-semibold">
-                            {exp.role}
-                          </p>
-                          <p className="text-gray-400">
-                            {exp.period} | {exp.location}
-                          </p>
-                          <ul className="list-disc list-inside mt-1 text-gray-300 space-y-1">
-                            {formatDescription(exp.description).map((desc, j) => (
-                              <li key={j}>{desc}</li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      ))}
-                    </div>
-                  ) : (
-                    <motion.div
-                      className="text-left"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {group.experiences.map((exp, i) => (
-                        <div key={i}>
-                          <p className="text-xl text-gray-300 font-semibold">
-                            {exp.role}
-                          </p>
-                          <p className="text-gray-400">
-                            {exp.period} | {exp.location}
-                          </p>
-                          <ul className="list-disc list-inside mt-1 text-gray-300 space-y-1">
-                            {formatDescription(exp.description).map((desc, j) => (
-                              <li key={j}>{desc}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </motion.div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+              {/* Right Side: Work Experience Details */}
+              <div className="w-[75%] pl-6">
+                <h3 className="text-3xl font-bold text-accent mb-2">
+                  {groupedExperiences[currentIndex].company}
+                </h3>
+
+                {/* If multiple roles in the same company, show vertically */}
+                {groupedExperiences[currentIndex].experiences.length > 1 ? (
+                  <div className="space-y-3">
+                    {groupedExperiences[currentIndex].experiences.map((exp, i) => (
+                      <motion.div
+                        key={i}
+                        className="border-b border-gray-600 pb-2"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.3, delay: i * 0.1 }}
+                      >
+                        <p className="text-xl text-gray-300 font-semibold">
+                          {exp.role}
+                        </p>
+                        <p className="text-gray-400">
+                          {exp.period} | {exp.location}
+                        </p>
+                        <ul className="list-disc list-inside mt-1 text-gray-300 space-y-1">
+                          {formatDescription(exp.description).map((desc, j) => (
+                            <li key={j}>{desc}</li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    ))}
+                  </div>
+                ) : (
+                  <motion.div
+                    className="text-left"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {groupedExperiences[currentIndex].experiences.map((exp, i) => (
+                      <div key={i}>
+                        <p className="text-xl text-gray-300 font-semibold">
+                          {exp.role}
+                        </p>
+                        <p className="text-gray-400">
+                          {exp.period} | {exp.location}
+                        </p>
+                        <ul className="list-disc list-inside mt-1 text-gray-300 space-y-1">
+                          {formatDescription(exp.description).map((desc, j) => (
+                            <li key={j}>{desc}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
+
+        {/* Right Scroll Button */}
+        <button
+          onClick={handleNext}
+          className="absolute right-4 text-white bg-accent p-3 rounded-full shadow-md hover:scale-110 transition"
+        >
+          <FaArrowRight size={20} />
+        </button>
       </div>
     </section>
   );
