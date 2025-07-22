@@ -1,23 +1,33 @@
 {
-  "name": "udaygattu.github.io",
+  "name": "udaygattu-portfolio",
   "version": "1.0.0",
+  "private": true,
+  "homepage": "https://udaygattu.github.io/",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
+    "clsx": "^2.1.0",
     "framer-motion": "^10.12.16",
-    "next": "15.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.10.1",
-    "react-scroll": "^1.8.9",
-    "typewriter-effect": "^2.19.0"
+    "lucide-react": "^0.292.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "shadcn-ui": "^0.7.0",
+    "three": "^0.178.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.0.0",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "vite": "^5.2.0"
   }
 }
