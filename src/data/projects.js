@@ -9,7 +9,7 @@ export const projects = [
     stack: ['FastAPI', 'Streamlit', 'YOLOv8', 'OpenCV', 'Stable Diffusion', 'GANs', 'Pillow', 'NumPy'],
     github: 'https://github.com/udaygattu/image-alchemist',
     demo: '',
-    image: '/images/projects/ImageAlchemist.jpg',
+    image: 'images/projects/ImageAlchemist.jpg',
   },
   {
     title: 'Innovative Text-to-Video System for Multi-Modal Content Creation',
@@ -21,7 +21,7 @@ export const projects = [
     stack: ['FastAPI', 'LangChain', 'Transformers', 'RAG', 'OpenAI API', 'ModelScope', 'TensorFlow', 'PyTorch', 'Runway AI'],
     github: 'https://github.com/udaygattu/text-to-video-rag',
     demo: '',
-    image: '/images/projects/TextToVideo.webp',
+    image: 'images/projects/TextToVideo.webp',
   },
   {
     title: 'Cloud-Native Application (Cloud Computing Google Cloud Platform)',
@@ -33,7 +33,7 @@ export const projects = [
     stack: ['JavaScript', 'GCP', 'Postman', 'GitHub', 'Terraform', 'Packer', 'MySQL'],
     github: 'https://github.com/udaygattu/cloud-gcp-app',
     demo: '',
-    image: '/images/projects/cloud.webp',
+    image: 'images/projects/cloud.webp',
   },
   {
     title: 'Interactive AI-based Tutor for Physics Education',
@@ -45,7 +45,7 @@ export const projects = [
     stack: ['FastAPI', 'LangChain', 'Transformers', 'RAG', 'OpenAI API', 'PyTorch', 'MySQL'],
     github: 'https://github.com/udaygattu/ai-physics-tutor',
     demo: '',
-    image: '/images/projects/Physics.webp',
+    image: 'images/projects/Physics.webp',
   },
   {
     title: 'AutoMate: AI-Powered Car Assistant',
@@ -57,7 +57,7 @@ export const projects = [
     stack: ['Voiceflow', 'AI Chatbot', 'NLP', 'FastAPI', 'JSON', 'Dialog Management'],
     github: 'https://github.com/udaygattu/automate-car-assistant',
     demo: '',
-    image: '/images/projects/AutoMate.webp',
+    image: 'images/projects/AutoMate.webp',
   },
   {
     title: 'Travel Agent Chatbot',
@@ -69,7 +69,7 @@ export const projects = [
     stack: ['Python', 'LangChain', 'FastAPI', 'MySQL', 'Transformers', 'NLP SQL', 'PyTorch'],
     github: 'https://github.com/udaygattu/travel-agent-chatbot',
     demo: '',
-    image: '/images/projects/TravelAgent.png',
+    image: 'images/projects/TravelAgent.png',
   },
   {
     title: 'Dermatological Image Generation Using Latent Diffusion Models',
@@ -81,6 +81,29 @@ export const projects = [
     stack: ['Stable Diffusion', 'Hugging Face', 'CLIP', 'GCP', 'Transformers', 'UNet', 'PyTorch'],
     github: '',
     demo: '',
-    image: '/images/projects/SkinScript.webp',
+    image: 'images/projects/SkinScript.webp',
+  },
+];
+
+export const currentProjects = [
+  {
+    title: 'Red Teaming LLM Agent',
+    description: [
+      'Currently architecting a cutting-edge Red Teaming LLM Agent from the ground up, focused on advanced adversarial testing and robust AI safety. This project explores the boundaries of large language model security, with a strong emphasis on real-world resilience and ethical AI deployment.'
+    ],
+    stack: ['LLM', 'AI Safety', 'Red Teaming'],
+    github: '',
+    demo: '',
+    paragraph: true
+  },
+  {
+    title: 'MentorMind: LLM-Powered Consulting & Mentoring Agent Pipeline',
+    description: [
+      'Designing and engineering a robust, end-to-end agent pipeline that leverages large language models to deliver personalized consulting and mentoring at scale. This system orchestrates dynamic knowledge retrieval, adaptive dialogue, and actionable insights—empowering organizations and individuals to unlock new levels of growth and innovation.'
+    ],
+    stack: ['LLM', 'Consulting', 'Mentoring', 'AI Strategy', 'Agent Pipeline'],
+    github: '',
+    demo: '',
+    paragraph: true
   },
 ]; 
