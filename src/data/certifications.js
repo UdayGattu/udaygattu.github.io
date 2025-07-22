@@ -2,31 +2,31 @@ export const certifications = [
   {
     name: 'Introduction to Computer Science',
     issuer: 'Harvard (CS50)',
-    logo: 'images/studies /Harvard.webp',
+    logo: '/images/studies/Harvard.webp',
     highlight: false,
   },
   {
     name: 'Microsoft Azure Fundamentals',
     issuer: 'Microsoft',
-    logo: 'images/certifications/microsoft.png',
+    logo: '/images/certifications/microsoft.png',
     highlight: true,
   },
   {
     name: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
     issuer: 'Amazon Web Services (AWS)',
-    logo: 'images/certifications/aws.png',
+    logo: '/images/certifications/aws.png',
     highlight: true,
   },
   {
     name: 'Virtual Experience program participant',
     issuer: 'JPMorganChase',
-    logo: 'images/certifications/jpmorgan.png',
+    logo: '/images/certifications/jpmorgan.png',
     highlight: false,
   },
   {
     name: 'Microsoft Certified: Azure Developer Associate',
     issuer: 'Microsoft',
-    logo: 'images/certifications/microsoft.png',
+    logo: '/images/certifications/microsoft.png',
     highlight: 'main', // extra highlight for this one
   },
 ];
