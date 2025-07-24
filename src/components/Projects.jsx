@@ -1,11 +1,42 @@
 import { projects } from '../data/projects';
+import { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Projects() {
+  const scrollRef = useRef(null);
+
+  const scroll = (dir) => {
+    if (!scrollRef.current) return;
+    const amount = 370; // match card width
+    scrollRef.current.scrollBy({
+      left: dir === 'left' ? -amount : amount,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section className="section" id="projects">
-      <div className="card">
+      <div className="card relative">
         <h2 className="heading text-3xl md:text-4xl mb-8">Projects</h2>
+        {/* Scroll Buttons */}
+        <button
+          aria-label="Scroll left"
+          className="hidden md:flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md rounded-full w-10 h-10 border border-gray-200 transition"
+          style={{ boxShadow: '0 2px 8px 0 rgba(0,0,0,0.10)' }}
+          onClick={() => scroll('left')}
+        >
+          <ChevronLeft className="w-6 h-6 text-gray-700" />
+        </button>
+        <button
+          aria-label="Scroll right"
+          className="hidden md:flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-md rounded-full w-10 h-10 border border-gray-200 transition"
+          style={{ boxShadow: '0 2px 8px 0 rgba(0,0,0,0.10)' }}
+          onClick={() => scroll('right')}
+        >
+          <ChevronRight className="w-6 h-6 text-gray-700" />
+        </button>
         <div
+          ref={scrollRef}
           className="flex flex-col md:flex-row gap-8 md:gap-6 overflow-x-auto md:overflow-x-auto md:scrollbar-thin md:scrollbar-thumb-gray-300 md:scrollbar-track-gray-100 snap-x md:snap-x md:pb-2"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
