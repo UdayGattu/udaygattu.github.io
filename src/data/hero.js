@@ -1,6 +1,6 @@
 export const hero = {
   name: 'Uday Shankar Gattu',
-  tagline: 'Founding Engineer | Machine Learning Engineer | Prompt Engineer | Generative AI | Cloud Systems',
+  tagline: 'Founding Engineer | Machine Learning Engineer | Generative AI | Cloud Systems',
   intro: `I build intelligent, scalable AI and cloud systems for the future.`,
   buttons: [
     { label: 'View Resume', href: '/images/UdayResume.pdf', type: 'download' },
