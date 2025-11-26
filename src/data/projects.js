@@ -11,7 +11,7 @@ persistence, which streamlined the generation of multi-modal ad variations and c
     stack: ['FastAPI', 'LangGraph', 'Vertex AI (Imagen 2, Veo 3.1)', 'Gemini Vision', 'CLIP', 'OpenCV', 'Docker', 'Redis'],
     github: 'https://github.com/BrandTrustAI/BrandAI.git',
     demo: '',
-    image: 'images/projects/var_1.jpg',
+    image: 'images/projects/var_1.png',
   },
   {
     title: 'Image Alchemist: AI-Driven eCommerce Image Enhancement',
