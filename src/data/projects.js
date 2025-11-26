@@ -1,4 +1,18 @@
 export const projects = [
+    {
+    title: 'BrandAI – AI-Powered Advertisement Critique Engine',
+    description: [
+      `Built a comprehensive ad-generation engine orchestrating Gemini Vision and CLIP to autonomously critique and generate brand-
+aligned marketing assets, reducing the manual review cycle for creative teams by 50% while ensuring strict brand compliance`,
+      `Implemented a fault-tolerant agent workflow using LangGraph with parallel execution and retry logic, backed by Redis for state
+persistence, which streamlined the generation of multi-modal ad variations and cut end-to-end processing latency by 40%`,
+      
+    ],
+    stack: ['FastAPI', 'LangGraph', 'Vertex AI (Imagen 2, Veo 3.1)', 'Gemini Vision', 'CLIP', 'OpenCV', 'Docker', 'Redis'],
+    github: 'https://github.com/BrandTrustAI/BrandAI.git',
+    demo: '',
+    image: 'images/projects/var_1.jpg',
+  },
   {
     title: 'Image Alchemist: AI-Driven eCommerce Image Enhancement',
     description: [
