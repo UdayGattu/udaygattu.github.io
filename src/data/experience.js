@@ -5,7 +5,7 @@ export const experience = [
     title: 'Founding AI Engineer',
     duration: 'June 2025 – Present',
     location: 'Boston, MA',
-    logo: 'images/work/Galexor.jpeg',
+    logo: 'images/work/Galexor.png',
     bullets: [
       `Spearheaded the end-to-end engineering of the Galexor MVP, delivering a fully functional adversarial prompt processing pipeline
 in a condensed 3-month timeline to secure critical pre-seed VC funding and launch initial pilot programs`,
