@@ -1,4 +1,22 @@
 export const experience = [
+
+  {
+    company: 'Galexor AI',
+    title: 'Founding AI Engineer',
+    duration: 'June 2025 – Present',
+    location: 'Boston, MA',
+    logo: 'images/work/Galexor.jpeg',
+    bullets: [
+      `Spearheaded the end-to-end engineering of the Galexor MVP, delivering a fully functional adversarial prompt processing pipeline
+in a condensed 3-month timeline to secure critical pre-seed VC funding and launch initial pilot programs`,
+      `Architected a low-latency backend using FastAPI and WebSockets, implementing fan-out aggregation that reduced query response
+times by 40% while handling concurrent adversarial attacks during live enterprise security demonstrations`,
+      `Engineered adversarial testing frameworks to stress-test Large Language Models against prompt injection, finetuning open-source
+models on synthetic vulnerability datasets to establish the company's core safety compliance standards`,
+      `Designed the complete MLOps strategy for agentic workflows by integrating LangSmith for observability and Redis for state
+management, allowing the R&D team to rapidly iterate on prototypes and deploy production-ready agents with 99.9% uptime`
+    ]
+  },
   // Northeastern University (combined TA roles)
   {
     company: 'Northeastern University',
