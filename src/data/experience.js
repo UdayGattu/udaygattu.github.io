@@ -22,9 +22,12 @@ export const experience = [
     location: 'Remote / Hyderabad',
     logo: 'images/work/TCSLogo.png',
     bullets: [
-      'Deployed predictive models on Azure, improving efficiency by 20% and reducing latency by 30%.',
-      'Built scalable ML pipelines and dashboards, increasing model accuracy by 10%.',
-      'Led MLOps workflows, improving deployment time by 30% and ensuring 99% uptime.'
+      `Deployed predictive maintenance pipelines on Azure Machine Learning to automate cloud governance, processing 5TB of log
+data daily to identify resource bottlenecks and reduce operational infrastructure costs by 15% through preemptive resource scaling`,
+      `Built real-time monitoring dashboards using Flask and JavaScript to visualize distributed system health, enabling the operations
+team to detect anomalies faster and cutting the average mean time to resolution (MTTR) for critical server incidents by 30%`,
+      `Optimized data ingestion workflows by implementing distributed storage solutions with Azure Data Lake and SQL, refactoring
+legacy query logic to improve data retrieval speeds for high-volume enterprise workloads without compromising data integrity`
     ]
   },
   {
@@ -34,9 +37,11 @@ export const experience = [
     location: 'Hyderabad, Telangana, India',
     logo: 'images/work/TCSLogo.png',
     bullets: [
-      'Developed backend services with Python/Flask, improving data retrieval by 25%.',
-      'Optimized SQL/NoSQL databases, reducing latency by 30%.',
-      'Achieved Azure Fundamentals certification, boosting system performance by 20%.'
+      `Developed RESTful APIs for cloud automation using Python and Flask to replace manual provisioning scripts, improving the
+consistency of resource deployment and significantly reducing the setup time required for new development environments`,
+      `Implemented infrastructure-as-code automation using Terraform and Azure Functions, creating reusable modules that standardized
+cloud resource allocation and eliminated configuration drift across multiple staging and production environments`
+      
     ]
   },
   // EduSkills Foundation
